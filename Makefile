@@ -1,3 +1,8 @@
+
+# Nom de l'image Docker (peut être surchargé par une variable d'environnement)  
+IMAGE_NAME ?= health-calculator-service  
+TAG ?= latest
+# Empêche make d'interpréter ces noms comme des fichiers
 .PHONY: init run test build clean
 
 init:
@@ -12,9 +17,9 @@ test:
 	@echo "Running tests..."
 	pytest test.py -v
 
-build:
-	@echo "Building the Docker image..."
-	docker build -t health-calculator .
+build:  
+	@echo "--- Building the Docker image (${IMAGE_NAME}:${TAG}) ---"  
+	docker build -t ${IMAGE_NAME}:${TAG} .
 
 clean:
 	@echo "Cleaning up..."
