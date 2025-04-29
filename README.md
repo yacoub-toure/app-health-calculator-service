@@ -70,16 +70,24 @@ Tu peux utiliser curl ou même ton navigateur web.
 
 curl http://127.0.0.1:5000/health
 
-# Tester l'endpoint /bmi (POST) :
+### Tester l'endpoint /bmi (POST) :
 Cet endpoint attend des données JSON avec height (en mètres) et weight (en kg).
 
-curl -X POST http://127.0.0.1:5000/bmi \
+curl -X POST \
      -H "Content-Type: application/json" \
-     -d '{"height": 1.75, "weight": 70}'
+     -d '{"height": 1.75, "weight": 70}' \
+     http://localhost:5000/bmi
 
- Ajoute les tests pour les endpoints de l'API Flask (/bmi, /bmr) dans test.py. C'est une exigence du projet et cela garantirait que l'API elle-même fonctionne comme prévu (gestion des requêtes POST, JSON, codes de statut HTTP).
 
-# CI CD
+### Tester l'Endpoint /bmi
+
+curl -X POST \
+     -H "Content-Type: application/json" \
+     -d '{"height": 1.75, "weight": 70}' \
+     http://localhost:5000/bmi
+
+
+
 
 
 ## Development
