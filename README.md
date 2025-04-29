@@ -77,8 +77,9 @@ curl -X POST http://127.0.0.1:5000/bmi \
      -H "Content-Type: application/json" \
      -d '{"height": 1.75, "weight": 70}'
 
+ Ajoute les tests pour les endpoints de l'API Flask (/bmi, /bmr) dans test.py. C'est une exigence du projet et cela garantirait que l'API elle-même fonctionne comme prévu (gestion des requêtes POST, JSON, codes de statut HTTP).
 
-#  Ajoute les tests pour les endpoints de l'API Flask (/bmi, /bmr) dans test.py. C'est une exigence du projet et cela garantirait que l'API elle-même fonctionne comme prévu (gestion des requêtes POST, JSON, codes de statut HTTP).
+# CI CD
 
 
 ## Development
